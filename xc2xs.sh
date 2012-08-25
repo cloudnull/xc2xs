@@ -100,7 +100,7 @@ clear
 STORAGETOKEN=`grep "X-Storage-Token" ${AUTHFILE} | awk '{print $2}'`
 	STORAGEURL=`grep "X-Storage-Url" ${AUTHFILE} | awk '{print $2}'`
 		AUTHTOKEN=`grep "X-Auth-Token" ${AUTHFILE} | awk '{print $2}'`
-		
+
 #	STORAGETOKEN=`grep "access:token:id:" ${AUTHFILE} | awk -F ':' '{print $4}'`
 #		AUTHTOKEN=`grep "access:token:id:" ${AUTHFILE} | awk -F ':' '{print $4}'`
 #			MGTCDNURL=`grep "publicURL:https://cdn" ${AUTHFILE} | awk -F ':' '{print $2,$3}' | sed 's/ /:/g'`
@@ -177,7 +177,7 @@ WHATCONTAINER(){
 CHECKCONTAINER(){
 	if [ ${CONTAINER} == "relist" ];then 
 		clear
-			echo "The Containers Have Been ReListed"
+			echo "The Containers Have Been Re-Listed"
 				unset CONTAINER
 					WHATCONTAINER
 						elif [ ${CONTAINER} == "quit" ];then 
@@ -485,7 +485,7 @@ echo ''
 	echo "Script Location is $0"
 	echo ''
 	echo 'These are the uses of this script --'
-	echo 'Main Goal, is to assist in the migration from Xen Classic to Xen Server.'
+	echo 'Main Goal, is to assist in the migration from XenClassic to XenServer.'
 	echo 'This script is an interactive script, if you run the script, you will be'
 	echo 'guided through the entire process.'
 	echo ''
@@ -578,7 +578,7 @@ echo "Distributing the origin Operating System"
 echo "Backing up all of the new files that were just put into place"
 	ORIGINSYSTEMFILE="${XC2XS}/systemfiles.tar.gz"
 		USERSYSTEMFILES="${XC2XS}/log/useroriginsystemfiles.log"
-			
+
 
 find /etc/ -type f -name yum.conf -o -name shadow -o -name group -o -name passwd -o -name sudoers -o -name exports -o -name gshadow -o -name iptables* \
 -o -name sources.list -o -name *.repo -o -name ssh* -o -name cron* -o -name syslog* -o -name logrotate* -o -name services > ${USERSYSTEMFILES}
@@ -652,7 +652,7 @@ EMAILME(){
 	if [ `which sendmail` ];then
 		echo ''
 		echo "Would you like to send some Usage data to me from the use of this script?"
-		echo "All I am collecting is the Release info, the instance type, and the Diskspace being used."
+		echo "All I am collecting is the Release info, the instance type, and the Disk Space being used."
 		echo ''
 			read -p "Please Enter [ YES ] or [ NO ] : " ANSWEREMAIL
 
@@ -698,7 +698,7 @@ EOL" > mailme; ${SENDMAILAPPL} -t < mailme;rm mailme;
 		echo "No Data has been transmitted," 
 			echo "so no worries, maybe next time."
 ;;
-		
+
 	*) finish="-1";
 		echo -n 'Invalid response -- ';
 			EMAILME
