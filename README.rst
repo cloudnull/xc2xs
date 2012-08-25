@@ -6,9 +6,6 @@ Why would you want to convert to XenServer
 
 The simple answer is XenServer is the platform that Rackspace will be supporting for the forseable future.  This means that all development will be done on the XenServer platform.  The long answer has to do with both Memory utilizations as well as IO performance. Additionally, Rackspace has made a change to the infrastructure allowing image snapshots of up to 160GB for both Linux and Windows. These benefits are some of the reasons why you may want to convert from Xen Classic (Open Source) to XenServer.
 
-Preface
-^^^^^^^
-
 This was my Origin Servers Image 
  * Rackspace Cloud Server
  * Image 77 - CentOS 5.6
